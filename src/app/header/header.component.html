@@ -1,5 +1,7 @@
 <md-toolbar color="primary">
-  <h3 class="name"><md-icon>mood</md-icon> Игорь Тихоненко</h3>
+  <a [routerLink]="['/home']">
+    <h3 class="name xs-hidden"><md-icon>mood</md-icon> Игорь Тихоненко</h3>
+  </a>
   <a md-mini-fab [mdMenuTriggerFor]="menu"><md-icon>more_vert</md-icon></a>
 </md-toolbar>
   

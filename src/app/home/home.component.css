@@ -1,0 +1,12 @@
+.home-page {
+    padding: 25px 80px 80px;
+}
+
+.img-wrapper {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.custom-h1 {
+    text-align: center;
+}

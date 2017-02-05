@@ -1,12 +1,16 @@
-.container-fluid-custom {
-    padding-left: 0;
-    padding-right: 0;
-}
 
 .right-sidenave-md {
     padding-left: 0;
     padding-right: 0;
-    max-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.left-sidenav-md {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 .md-tab-label {
