@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  style: string = localStorage['style'] ? localStorage['style'] : 'light-blue-theme';
+
+  onChange($event) {
+    this.style = $event.newStyle;
+    localStorage['style'] = $event.newStyle;
+  }
 }

@@ -1,4 +1,25 @@
-<h1>
-  {{title}}
-  <router-outlet></router-outlet>
-</h1>
+<div [class]="style">
+  <app-header></app-header>
+  <div class="radio-button-styling">
+    <app-changestyle (change)="onChange($event)" [currentStyle]="style"></app-changestyle>
+  </div>
+
+  <div width="200px">
+    <md-tab-group color="primary">
+    <md-tab label="One">
+      <h1>Some tab content</h1>
+      <p>...</p>
+    </md-tab>
+    <md-tab label="Two">
+      <h1>Some more tab content</h1>
+      <p>...</p>
+    </md-tab>
+  </md-tab-group>
+
+  </div>
+
+
+
+    <router-outlet></router-outlet>
+</div>
+

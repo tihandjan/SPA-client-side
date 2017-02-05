@@ -1,0 +1,5 @@
+<md-radio-group class="example-radio-group">
+  <md-radio-button  class="example-radio-button" *ngFor="let style of styles" #radio (click)="onClick(radio.value)" [value]="style" [checked]="currentStyle == style">
+    
+  </md-radio-button>
+</md-radio-group>
