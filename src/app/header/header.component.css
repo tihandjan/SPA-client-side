@@ -8,3 +8,8 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+.name {
+  font-family: cursive;
+  font-size: 1.5em;
+}
