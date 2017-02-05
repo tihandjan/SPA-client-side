@@ -19,7 +19,8 @@
       "mobile": false,
       "styles": [
         "styles.css",
-        "theme.scss"
+        "theme.scss",
+        "custom.scss"
       ],
       "scripts": [],
       "environments": {

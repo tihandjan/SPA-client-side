@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ChangestyleComponent } from './changestyle/changestyle.component';
+import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ChangestyleComponent
+    ChangestyleComponent,
+    RightSidenavComponent
   ],
   imports: [
     BrowserModule,
