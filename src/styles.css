@@ -27,6 +27,15 @@ md-radio-button {
   position: fixed;
   top: 30%;
   left: 15px;
+  z-index: 99;
+}
+
+md-toolbar-row {
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
 }
 
 article,
