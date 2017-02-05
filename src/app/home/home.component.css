@@ -1,5 +1,5 @@
 .home-page {
-    padding: 25px 80px 80px;
+    padding: 25px 80px 70px;
 }
 
 .img-wrapper {
@@ -9,4 +9,32 @@
 
 .custom-h1 {
     text-align: center;
+}
+
+.country {
+    color: #808080;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    margin-top: -12px;
+}
+
+.spacer-line {
+    margin: 0 auto;
+    font-size: 60px;
+    top: -45px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.text-wrapper {
+    margin-top: -14px;
+}
+
+.upwork img {
+    position: absolute;
+    top: 40px;
+    right: 106px;
+    width: 100px;
 }
