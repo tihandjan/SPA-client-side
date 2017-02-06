@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-right-sidenav',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RightSidenavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onLinkClick($event: any) {
+    if($event.index === 0) {
+      this.router.navigate(['projects']);
+    } else if ($event.index === 1) {
+      this.router.navigate(['articles']);
+    } else if ($event.index === 2) {
+      this.router.navigate(['contacts']);
+    }
   }
 
 }

@@ -1,0 +1,23 @@
+.contacts-wrapper {
+    padding: 50px 150px 70px;
+}
+
+.contacts-h1 {
+    font-family: cursive;
+}
+
+.spacer-line {
+    margin: 0 auto;
+    font-size: 60px;
+    top: -45px;
+    line-height: 20px;
+    position: relative;
+}
+
+md-input-container {
+    width: 100%;
+}
+
+.contacts-text {
+    margin-top: 0;
+}

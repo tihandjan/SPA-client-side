@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ChangestyleComponent } from './changestyle/changestyle.component';
 import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
     HomeComponent,
     HeaderComponent,
     ChangestyleComponent,
-    RightSidenavComponent
+    RightSidenavComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
