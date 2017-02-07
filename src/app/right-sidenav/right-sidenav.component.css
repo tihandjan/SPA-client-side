@@ -25,3 +25,34 @@ a:hover {
     right: 30px;
     width: 120px;
 }
+
+.row-custom {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+.col-custom {
+    margin-bottom: 25px;
+}
+
+md-card-content {
+    height: 105px;
+}
+
+.title {
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.technology {
+    color: #808080;
+}
+
+.summary {
+    margin-top: 7px;
+}
+
+md-card-content {
+    margin-top: -8px;
+}

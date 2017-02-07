@@ -1,7 +1,30 @@
 <div class="shadow-navbar">
   <md-tab-group color="primary"  (selectChange)="onLinkClick($event)">
     <md-tab label="Проэкты">
-      <h1>Some tab content</h1>
+      <div class="row row-custom">
+       
+        <div class="col-sm-6 col-custom" *ngFor="let project of projects">
+          <md-card class="example-card">
+              <img md-card-image [src]="project.image">
+              <md-card-content>
+                <div class="title">
+                  <strong>
+                    {{ project.title }}
+                  </strong>
+                </div>
+                <span class="technology">
+                  <i>
+                    {{ project.technology }}
+                  </i>
+                </span>
+                <p class="summary">
+                  {{ project.summary | truncate }}
+                </p>
+              </md-card-content>
+            </md-card>
+        </div>
+      </div>
+
     </md-tab>
     <md-tab label="Обучалка">
       <h1>Some more tab content</h1>

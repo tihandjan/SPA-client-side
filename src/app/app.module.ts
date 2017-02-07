@@ -12,6 +12,9 @@ import { HeaderComponent } from './header/header.component';
 import { ChangestyleComponent } from './changestyle/changestyle.component';
 import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ContactsComponent } from './contacts/contacts.component';
     HeaderComponent,
     ChangestyleComponent,
     RightSidenavComponent,
-    ContactsComponent
+    ContactsComponent,
+    ProjectsComponent,
+    ArticlesComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
