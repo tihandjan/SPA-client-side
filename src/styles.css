@@ -3,15 +3,12 @@
 @import '~https://fonts.googleapis.com/css?family=Ubuntu';
 
 html {
-  font-family: sans-serif;
   overflow-y: hidden;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif !important;
 }
 
 md-radio-button {

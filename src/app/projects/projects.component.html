@@ -1,3 +1,17 @@
-<p>
-  projects works!
-</p>
+<div class="projects-page">
+  <div class="img-wrapper">
+    <img [src]="project.image" [alt]="project.title">
+  </div>
+  <h1 class="project-h1">{{ project.title }}</h1>
+  <p class="spacer-line">__</p>
+  <p class="project-technology">{{ project.technology }}</p>
+  <p class="project-description">{{ project.description }}</p>
+
+  <p>Website: <a href="{{ project.site_url }}" target="_blank">{{ project.name }}</a></p>
+  <p>Дата релиза: <span class="realise-date">{{ project.realise }}</span></p>
+
+  <div class="pagination-custom clearfix">
+    <a md-raised-button href="#" class="prev"><md-icon>arrow_back</md-icon></a>
+    <a md-raised-button href="#" class="next"><md-icon>arrow_forward</md-icon></a>
+  </div>
+</div>

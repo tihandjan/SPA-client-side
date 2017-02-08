@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
+import { ProjectsService } from './projects/projects.service';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -35,7 +36,7 @@ import { TruncatePipe } from './truncate.pipe';
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [],
+  providers: [ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

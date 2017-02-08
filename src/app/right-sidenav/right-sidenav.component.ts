@@ -15,28 +15,40 @@ export class RightSidenavComponent implements OnInit {
       summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
       technology: 'Rails, Angular 2',
       image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.'
+      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
+      site_url: 'http://nafootball.com',
+      realise: '2016 январь',
+      name: 'nafootball'
     },
     {
       title: 'nafootabell',
       summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
       technology: 'Rails, Angular 2',
       image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.'
+      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
+      site_url: 'http://nafootball.com',
+      realise: '2016 январь',
+      name: 'nafootball'
     },
     {
       title: 'nafootabell',
       summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
       technology: 'Rails, Angular 2',
       image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.'
+      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
+      site_url: 'http://nafootball.com',
+      realise: '2016 январь',
+      name: 'nafootball'
     },
     {
       title: 'nafootabell',
       summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
       technology: 'Rails, Angular 2',
       image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.'
+      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
+      site_url: 'http://nafootball.com',
+      realise: '2016 январь',
+      name: 'nafootball'
     }  
   ]
   constructor(private router: Router) { }

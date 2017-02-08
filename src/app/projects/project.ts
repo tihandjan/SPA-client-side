@@ -3,5 +3,8 @@ export interface Project {
     summary: string,
     technology: string,
     description: string,
-    image: string
+    image: string,
+    site_url: string,
+    realise: string,
+    name: string
 }
