@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
 
 import { Project } from '../projects/project';
+import { ProjectsService } from '../projects/projects.service';
 
 @Component({
   selector: 'app-right-sidenav',
@@ -9,50 +11,12 @@ import { Project } from '../projects/project';
   styleUrls: ['./right-sidenav.component.css']
 })
 export class RightSidenavComponent implements OnInit {
-  projects: Project[] = [
-    {
-      title: 'nafootabell',
-      summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      technology: 'Rails, Angular 2',
-      image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      site_url: 'http://nafootball.com',
-      realise: '2016 январь',
-      name: 'nafootball'
-    },
-    {
-      title: 'nafootabell',
-      summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      technology: 'Rails, Angular 2',
-      image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      site_url: 'http://nafootball.com',
-      realise: '2016 январь',
-      name: 'nafootball'
-    },
-    {
-      title: 'nafootabell',
-      summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      technology: 'Rails, Angular 2',
-      image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      site_url: 'http://nafootball.com',
-      realise: '2016 январь',
-      name: 'nafootball'
-    },
-    {
-      title: 'nafootabell',
-      summary: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      technology: 'Rails, Angular 2',
-      image: 'assets/images/guys-glasses.jpg',
-      description: 'The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.',
-      site_url: 'http://nafootball.com',
-      realise: '2016 январь',
-      name: 'nafootball'
-    }  
-  ]
-  constructor(private router: Router) { }
+  projects: Project[];
+  errorMessage: string;
+  constructor(private router: Router, private projectsService: ProjectsService) { }
   ngOnInit() {
+    let timer = Observable.timer(0, 5000)
+    timer.subscribe(() => this.getDocuments())
   }
 
   onLinkClick($event: any) {
@@ -65,8 +29,12 @@ export class RightSidenavComponent implements OnInit {
     }
   }
 
-  someClick() {
-    console.log('clicked');
+  getDocuments() {
+    this.projectsService.getProjects()
+                        .subscribe(
+                          response => this.projects = response,
+                          error => this.errorMessage = error
+                        )
   }
 
 }
