@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ShowProjectComponent } from './projects/show-project.component';
 import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'contacts', component: ContactsComponent },
     { path: 'projects', component: ProjectsComponent },
-    { path: 'articles', component: ArticlesComponent }
+    { path: 'projects/:id', component: ShowProjectComponent },
+    { path: 'articles', component: ArticlesComponent },
 ]
 
 @NgModule({

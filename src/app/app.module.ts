@@ -15,6 +15,7 @@ import { RightSidenavComponent } from './right-sidenav/right-sidenav.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { ShowProjectComponent } from './projects/show-project.component';
 import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TruncatePipe } from './truncate.pipe';
     ContactsComponent,
     ProjectsComponent,
     ArticlesComponent,
+    ShowProjectComponent,
     TruncatePipe
   ],
   imports: [
