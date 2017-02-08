@@ -16,7 +16,7 @@ export class RightSidenavComponent implements OnInit {
   constructor(private router: Router, private projectsService: ProjectsService) { }
   ngOnInit() {
     let timer = Observable.timer(0, 5000)
-    timer.subscribe(() => this.getDocuments())
+    timer.subscribe(() => this.getProjects())
   }
 
   onLinkClick($event: any) {
@@ -29,7 +29,7 @@ export class RightSidenavComponent implements OnInit {
     }
   }
 
-  getDocuments() {
+  getProjects() {
     this.projectsService.getProjects()
                         .subscribe(
                           response => this.projects = response,
