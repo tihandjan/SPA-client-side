@@ -60,3 +60,23 @@ md-card-content {
 .social-media a{
     margin-top: 5px;
 }
+
+md-grid-tile img {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+md-grid-tile img:hover {
+    cursor: pointer;
+    width: 110%;
+}
+
+.more [md-raised-button] {
+    width: 100%;
+    margin-bottom: 80px;
+    height: 50px;
+    border-radius: 0
+}

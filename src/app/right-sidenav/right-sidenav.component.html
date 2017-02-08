@@ -3,7 +3,7 @@
     <md-tab label="Проэкты">
       <div class="row row-custom">
        
-        <div class="col-sm-6 col-custom" *ngFor="let project of projects">
+        <div class="col-lg-6 col-custom" *ngFor="let project of projects">
           <a [routerLink]="['projects', project.id]">
             <md-card class="example-card">
               <img md-card-image [src]="project.image">
@@ -29,8 +29,48 @@
 
     </md-tab>
     <md-tab label="Обучалка">
-      <h1>Some more tab content</h1>
-      <p>...</p>
+      <md-grid-list cols="1" rowHeight="200px">
+
+        <md-grid-tile>
+            <img width="100%" src="http://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-deve-picture-id537331536?k=6&m=537331536&s=170667a&w=0&h=Iz87szVSGocOO_efXjRSK0lVT2s1R2puXVuapJP5FcQ=" alt="RoR">
+            <md-grid-tile-footer>
+              <h3 md-line>Hello RoR</h3>
+              <span md-line>Hello Angular 2</span>
+              <md-icon>info</md-icon>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+            <img width="100%" src="http://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-deve-picture-id537331536?k=6&m=537331536&s=170667a&w=0&h=Iz87szVSGocOO_efXjRSK0lVT2s1R2puXVuapJP5FcQ=" alt="RoR">
+            <md-grid-tile-footer>
+              <h3 md-line>Hello RoR</h3>
+              <span md-line>Hello Angular 2</span>
+              <md-icon>info</md-icon>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+            <img width="100%" src="https://s3.amazonaws.com/media.skillcrush.com/uploads/2015/02/22194220/37-rails-main.jpg" alt="RoR">
+            <md-grid-tile-footer>
+              <h3 md-line>Hello RoR</h3>
+              <span md-line>Hello Angular 2</span>
+              <md-icon>info</md-icon>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+        <md-grid-tile>
+            <img width="100%" src="https://s3.amazonaws.com/media.skillcrush.com/uploads/2015/02/22194220/37-rails-main.jpg" alt="RoR">
+            <md-grid-tile-footer>
+              <h3 md-line>Hello RoR</h3>
+              <span md-line>Hello Angular 2</span>
+              <md-icon>info</md-icon>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+
+      </md-grid-list>
+      <div class="more">
+        <button md-raised-button color="primary">Еще</button>
+      </div>
     </md-tab>
     <md-tab label="Контакты">
       <md-card>
