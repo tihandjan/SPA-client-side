@@ -1,11 +1,10 @@
-<md-toolbar color="primary">
-  <a [routerLink]="['/home']">
-    <h3 class="name xs-hidden"><md-icon>mood</md-icon> Игорь Тихоненко</h3>
+<md-toolbar color="primary">  
+  <a>
+    <h3 class="name xs-hidden">
+      <button md-mini-fab (click)="side.toggle()"><md-icon>more_vert</md-icon></button>
+      <a [routerLink]="['home']">Игорь Тихоненко</a>
+    </h3>
   </a>
-  <a md-mini-fab [mdMenuTriggerFor]="menu"><md-icon>more_vert</md-icon></a>
+  <md-icon>mood</md-icon>
 </md-toolbar>
   
-<md-menu #menu="mdMenu">
-  <button md-menu-item>Войти</button>
-  <button md-menu-item>Регистрация</button>
-</md-menu>

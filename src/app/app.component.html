@@ -1,19 +1,32 @@
 <div [class]="style">
-  <app-header></app-header>
+
+  <app-header [side]="sidenav"></app-header>
   <div class="radio-button-styling">
     <app-changestyle (change)="onChange($event)" [currentStyle]="style"></app-changestyle>
   </div>
 
-  <div class="container-fluid container-fluid-custom">
-    <div class="row">
-      <div class="col-md-8 left-sidenav-md">
-        <router-outlet></router-outlet>
-      </div>
-      <div class="col-md-4 right-sidenave-md">
-        <app-right-sidenav></app-right-sidenav>
+  <md-sidenav-container class="left-sidenav-container">
+    <md-sidenav opened="false" mode="push" #sidenav class="left-sidenav">
+
+      <md-list>
+        <md-list-item><a [routerLink]="['/home']"     class="link-to-chepter" md-button color="primary"><md-icon>home</md-icon>&nbsp; Главная</a></md-list-item>
+        <md-list-item><a [routerLink]="['/projects']" class="link-to-chepter" md-button color="primary"><md-icon>important_devices</md-icon>&nbsp; Мои Проэкты</a></md-list-item>
+        <md-list-item><a [routerLink]="['/articles']" class="link-to-chepter" md-button color="primary"><md-icon>library_books</md-icon>&nbsp; Обучалка</a></md-list-item>
+        <md-list-item><a [routerLink]="['/contacts']" class="link-to-chepter" md-button color="primary"><md-icon>contact_mail</md-icon>&nbsp; Контакты</a></md-list-item>
+      </md-list> 
+    </md-sidenav>
+
+    <div class="container-fluid container-fluid-custom">
+      <div class="row">
+        <div class="col-md-8 left-sidenav-md">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-4 right-sidenave-md">
+          <app-right-sidenav></app-right-sidenav>
+        </div>
       </div>
     </div>
-  </div>
+  </md-sidenav-container>
 
 </div>
 

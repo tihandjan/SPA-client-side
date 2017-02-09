@@ -1,0 +1,14 @@
+.left-sidenav {
+    width: 320px;
+}
+
+.link-to-chepter {
+    margin: auto;
+    width: 75%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.link-to-chepter:hover {
+    text-decoration: none;
+}

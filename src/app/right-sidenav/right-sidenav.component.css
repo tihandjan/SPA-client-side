@@ -61,6 +61,10 @@ md-card-content {
     margin-top: 5px;
 }
 
+.social-media {
+    margin-bottom: 50px;
+}
+
 md-grid-tile img {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -76,7 +80,8 @@ md-grid-tile img:hover {
 
 .more [md-raised-button] {
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 110px;
     height: 50px;
     border-radius: 0
 }
+

@@ -4,8 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
-import { ProjectsService } from './projects/projects.service';
 import 'hammerjs';
+
+import { ProjectsService } from './projects/projects.service';
+import { ArticlesService } from './articles/articles.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +18,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ShowProjectComponent } from './projects/show-project.component';
+import { ArticleShowComponent } from './articles/show-article.component';
 import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
@@ -29,6 +32,7 @@ import { TruncatePipe } from './truncate.pipe';
     ProjectsComponent,
     ArticlesComponent,
     ShowProjectComponent,
+    ArticleShowComponent,
     TruncatePipe
   ],
   imports: [
@@ -38,7 +42,7 @@ import { TruncatePipe } from './truncate.pipe';
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [ProjectsService],
+  providers: [ProjectsService, ArticlesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

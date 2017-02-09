@@ -1,5 +1,5 @@
 <div class="shadow-navbar">
-  <md-tab-group color="primary"  (selectChange)="onLinkClick($event)" [selectedIndex]="5">
+  <md-tab-group color="primary"  (selectChange)="onLinkClick($event)">
     <md-tab label="Проэкты">
       <div class="row row-custom">
        
@@ -31,41 +31,16 @@
     <md-tab label="Обучалка">
       <md-grid-list cols="1" rowHeight="200px">
 
-        <md-grid-tile>
-            <img width="100%" src="http://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-deve-picture-id537331536?k=6&m=537331536&s=170667a&w=0&h=Iz87szVSGocOO_efXjRSK0lVT2s1R2puXVuapJP5FcQ=" alt="RoR">
+        <md-grid-tile *ngFor="let article of articles" [routerLink]="['articles', article.id]">
+            <img width="100%" [src]="article.image" [alt]="article.title">
             <md-grid-tile-footer>
-              <h3 md-line>Hello RoR</h3>
-              <span md-line>Hello Angular 2</span>
+              <h3 md-line>{{ article.title }}</h3>
+              <span md-line>{{ article.summary }}</span>
               <md-icon>info</md-icon>
             </md-grid-tile-footer>
         </md-grid-tile>
 
-        <md-grid-tile>
-            <img width="100%" src="http://media.istockphoto.com/photos/programming-code-abstract-technology-background-of-software-deve-picture-id537331536?k=6&m=537331536&s=170667a&w=0&h=Iz87szVSGocOO_efXjRSK0lVT2s1R2puXVuapJP5FcQ=" alt="RoR">
-            <md-grid-tile-footer>
-              <h3 md-line>Hello RoR</h3>
-              <span md-line>Hello Angular 2</span>
-              <md-icon>info</md-icon>
-            </md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-            <img width="100%" src="https://s3.amazonaws.com/media.skillcrush.com/uploads/2015/02/22194220/37-rails-main.jpg" alt="RoR">
-            <md-grid-tile-footer>
-              <h3 md-line>Hello RoR</h3>
-              <span md-line>Hello Angular 2</span>
-              <md-icon>info</md-icon>
-            </md-grid-tile-footer>
-        </md-grid-tile>
-
-        <md-grid-tile>
-            <img width="100%" src="https://s3.amazonaws.com/media.skillcrush.com/uploads/2015/02/22194220/37-rails-main.jpg" alt="RoR">
-            <md-grid-tile-footer>
-              <h3 md-line>Hello RoR</h3>
-              <span md-line>Hello Angular 2</span>
-              <md-icon>info</md-icon>
-            </md-grid-tile-footer>
-        </md-grid-tile>
+      
 
       </md-grid-list>
       <div class="more">
@@ -77,7 +52,7 @@
         <div class="img-wrapper">
           <img src="/assets/images/guys-glasses.jpg" alt="handsome developer">
           <div class="upwork"><a href="https://www.upwork.com/o/profiles/users/_~01886ed47a9c118bd1/" target="_blank"><img src="/assets/images/hire_me_button_upwork.gif" alt="Upwork"></a></div>
-      </div>
+        </div>
         <h3 class="sidenav-contacts">Игорь Тихоненко</h3>
         <span class="sidenav-freelance">Фрилансер, web/mobile разработчик</span>
         <p class="sidenav-interesting-projects">В настоящее время принимаю предложения об участии в интересных проектах.</p>
