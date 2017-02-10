@@ -4,34 +4,59 @@
     <h1 class="h1">Add New Article</h1>
     <p class="spacer-line">___</p>
 
-    <form action="">
+    <form #form="ngForm" (ngSubmit)="createArticle(article)">
       <p>
         <md-input-container class="example-full-width">
-          <input md-input placeholder="title" required>
+          <input type="text" 
+                 md-input
+                 placeholder="title" 
+                 required
+                 name="title"
+                 #title="ngModel"
+                 [(ngModel)]="article.title">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Summary" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Summary" 
+                 required
+                 name="summary"
+                 #summary="ngModel"
+                 [(ngModel)]="article.summary">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Technology" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Technology" 
+                 required
+                 name="technology"
+                 #technology="ngModel"
+                 [(ngModel)]="article.technology">
         </md-input-container>
+      </p>
+      <p>
+          <input type="file"
+                 name="image"
+                 #image="ngModel"
+                 [(ngModel)]="article.image">
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input md-input placeholder="Upload the file" required>
+          <textarea type="text" 
+                    md-input 
+                    placeholder="Description" 
+                    name="description" id="" cols="30" rows="10" 
+                    required
+                    #description="ngModel"
+                    [(ngModel)]="article.description"></textarea>
         </md-input-container>
       </p>
       <p>
-        <md-input-container class="example-full-width">
-          <textarea md-input placeholder="Description" name="" id="" cols="30" rows="10" required></textarea>
-        </md-input-container>
-      </p>
-      <p>
-        <button type="submit" md-raised-button color="primary">Отправить</button>
+        <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Отправить</button>
       </p>
     </form>
   </md-card>

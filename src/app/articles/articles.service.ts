@@ -20,6 +20,13 @@ export class ArticlesService {
         return this.http.get(this.request_url + '/' + id + '.json')
     }
 
+    createArticle(article: Article) {
+      let headers = new Headers({ 'Content-type': 'application/json' });
+      let options = new RequestOptions({ headers: headers })
+      return this.http.post(this.request_url, JSON.stringify(article), options)
+                  .map((response: Response) => response.json());
+    }
+
     private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;

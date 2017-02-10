@@ -39,7 +39,7 @@ export class NewProjectComponent implements OnInit {
 
   showSnack(){
     let config = new MdSnackBarConfig();
-    this.snackbar.open('Project created successfully ', 'Got it', config);
+    this.snackbar.open('Project has been created successfully ', 'Got it', config);
   }
   
 
