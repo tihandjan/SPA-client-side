@@ -19,6 +19,13 @@ export class ProjectsService {
     return this.http.get(this.projects_url + '/' + id + '.json');
   }
 
+  createProject(project: Project) {
+    let headers = new Headers({ 'Content-type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post('http://localhost:3000/projects', JSON.stringify(project), options)
+                  .map((response: Response) => response.json());
+  }
+
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;

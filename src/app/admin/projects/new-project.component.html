@@ -4,59 +4,94 @@
     <h1 class="h1">Add New Project</h1>
     <p class="spacer-line">___</p>
 
-    <form action="">
+    <form #form="ngForm" (ngSubmit)="createProject(project)">
       <p>
         <md-input-container class="example-full-width">
-          <input md-input placeholder="title" required>
+          <input type="text" 
+                 md-input
+                 placeholder="title" 
+                 required
+                 name="title"
+                 #title="ngModel"
+                 [(ngModel)]="project.title">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Summary" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Summary" 
+                 required
+                 name="summary"
+                 #summary="ngModel"
+                 [(ngModel)]="project.summary">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Project Name" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Project Name" 
+                 required
+                 name="name"
+                 #name="ngModel"
+                 [(ngModel)]="project.name">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Realise Date" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Realise Date" 
+                 required
+                 name="realise"
+                 #realise="ngModel"
+                 [(ngModel)]="project.realise">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Site Url" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Site Url" 
+                 required
+                 name="site_url"
+                 #site_url="ngModel"
+                 [(ngModel)]="project.site_url">
         </md-input-container>
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input type="text" md-input placeholder="Technology" required>
+          <input type="text" 
+                 md-input 
+                 placeholder="Technology" 
+                 required
+                 name="technology"
+                 #technology="ngModel"
+                 [(ngModel)]="project.technology">
         </md-input-container>
+      </p>
+      <p>
+          <input type="file"
+                 name="image"
+                 #image="ngModel"
+                 [(ngModel)]="project.image">
       </p>
       <p>
         <md-input-container class="example-full-width">
-          <input md-input placeholder="Upload the file" required>
+          <textarea type="text" 
+                    md-input 
+                    placeholder="Description" 
+                    name="description" id="" cols="30" rows="10" 
+                    required
+                    #description="ngModel"
+                    [(ngModel)]="project.description"></textarea>
         </md-input-container>
       </p>
       <p>
-        <md-input-container class="example-full-width">
-          <textarea md-input placeholder="Description" name="" id="" cols="30" rows="10" required></textarea>
-        </md-input-container>
-      </p>
-      <p>
-        <button type="submit" md-raised-button color="primary">Отправить</button>
+        <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Отправить</button>
       </p>
     </form>
   </md-card>
 
 </div>
-title: string,
-    summary: string,
-    technology: string,
-    description: string,
-    image: string,
-    site_url: string,
-    realise: string,
-    name: string
