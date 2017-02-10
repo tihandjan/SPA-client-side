@@ -20,6 +20,9 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ShowProjectComponent } from './projects/show-project.component';
 import { ArticleShowComponent } from './articles/show-article.component';
 import { TruncatePipe } from './truncate.pipe';
+import { AdminComponent } from './admin/admin.component';
+import { NewArticleComponent } from './admin/articles/new-article.component';
+import { NewProjectComponent } from './admin/projects/new-project.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { TruncatePipe } from './truncate.pipe';
     ArticlesComponent,
     ShowProjectComponent,
     ArticleShowComponent,
-    TruncatePipe
+    TruncatePipe,
+    AdminComponent,
+    NewArticleComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,

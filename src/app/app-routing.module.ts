@@ -7,6 +7,9 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ShowProjectComponent } from './projects/show-project.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { ArticleShowComponent } from './articles/show-article.component';
+import { AdminComponent } from './admin/admin.component';
+import { NewArticleComponent } from './admin/articles/new-article.component';
+import { NewProjectComponent } from './admin/projects/new-project.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +18,10 @@ const routes: Routes = [
     { path: 'projects', component: ProjectsComponent },
     { path: 'projects/:id', component: ShowProjectComponent },
     { path: 'articles', component: ArticlesComponent },
-    { path: 'articles/:id', component: ArticleShowComponent }
+    { path: 'articles/:id', component: ArticleShowComponent }, 
+    { path: 'admin', component: AdminComponent },
+    { path: 'admin/articles/new', component: NewArticleComponent },
+    { path: 'admin/projects/new', component: NewProjectComponent },
 ]
 
 @NgModule({

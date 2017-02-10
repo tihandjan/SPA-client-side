@@ -1,0 +1,22 @@
+<div class="admin-page">
+  <md-card>
+    <md-grid-list cols="2" rowHeight="100px">
+      <md-grid-tile colspan="2">
+        <md-card>
+          <h1>Welcome to admin page</h1>
+        </md-card>
+      </md-grid-tile>
+      <md-grid-tile colspan="1">
+        <md-card>
+          <a md-raised-button [routerLink]="['/admin/articles/new']" color="primary">Add New Article</a>
+        </md-card>
+      </md-grid-tile>
+
+      <md-grid-tile colspan="1">
+        <md-card>
+          <a md-raised-button [routerLink]="['/admin/projects/new']" color="primary">Add New Projct</a>
+        </md-card>
+      </md-grid-tile>
+    </md-grid-list>
+  </md-card>
+</div>
