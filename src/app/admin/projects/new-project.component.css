@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 25px 25px 70px 45px;
+}
+
+.h1 {
+    font-family: cursive;
+}
+
+.spacer-line {
+    margin: 0 auto;
+    font-size: 60px;
+    top: -45px;
+    line-height: 20px;
+    position: relative;
+}
+
+md-input-container {
+    width: 100%;
+}
