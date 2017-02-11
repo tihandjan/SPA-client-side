@@ -8,15 +8,16 @@
       </md-grid-tile>
       <md-grid-tile colspan="1">
         <md-card>
-          <a md-raised-button [routerLink]="['/admin/articles/new']" color="primary">Add New Article</a>
+          <a md-raised-button [routerLink]="['articles/new']" color="primary">Add New Article</a>
         </md-card>
       </md-grid-tile>
 
       <md-grid-tile colspan="1">
         <md-card>
-          <a md-raised-button [routerLink]="['/admin/projects/new']" color="primary">Add New Projct</a>
+          <a md-raised-button [routerLink]="['projects/new']" color="primary">Add New Project</a>
         </md-card>
       </md-grid-tile>
     </md-grid-list>
   </md-card>
 </div>
+<router-outlet></router-outlet>

@@ -20,9 +20,13 @@ const routes: Routes = [
     { path: 'projects/:id', component: ShowProjectComponent },
     { path: 'articles', component: ArticlesComponent },
     { path: 'articles/:id', component: ArticleShowComponent }, 
-    { path: 'admin', component: AdminComponent },
-    { path: 'admin/articles/new', component: NewArticleComponent },
-    { path: 'admin/projects/new', component: NewProjectComponent },
+    { path: 'admin', 
+      component: AdminComponent ,
+      children: [
+        { path: 'articles/new', component: NewArticleComponent },
+        { path: 'projects/new', component: NewProjectComponent },
+      ]
+    },
     { path: '**', component: PageNotFoundComponent }
 ]
 
