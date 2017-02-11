@@ -10,6 +10,7 @@ import { ArticleShowComponent } from './articles/show-article.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewArticleComponent } from './admin/articles/new-article.component';
 import { NewProjectComponent } from './admin/projects/new-project.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
     { path: 'admin', component: AdminComponent },
     { path: 'admin/articles/new', component: NewArticleComponent },
     { path: 'admin/projects/new', component: NewProjectComponent },
+    { path: '**', component: PageNotFoundComponent }
 ]
 
 @NgModule({

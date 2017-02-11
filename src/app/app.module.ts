@@ -23,6 +23,7 @@ import { TruncatePipe } from './truncate.pipe';
 import { AdminComponent } from './admin/admin.component';
 import { NewArticleComponent } from './admin/articles/new-article.component';
 import { NewProjectComponent } from './admin/projects/new-project.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NewProjectComponent } from './admin/projects/new-project.component';
     TruncatePipe,
     AdminComponent,
     NewArticleComponent,
-    NewProjectComponent
+    NewProjectComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
