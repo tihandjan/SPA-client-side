@@ -16,9 +16,13 @@ export class RightSidenavComponent implements OnInit {
   projects: Project[];
   articles: Article[];
   errorMessage: string;
-  constructor(private router: Router, private projectsService: ProjectsService, private articlesService: ArticlesService) { }
+  constructor(
+    private router: Router, 
+    private projectsService: ProjectsService, 
+    private articlesService: ArticlesService
+  ) { }
   ngOnInit() {
-    let timer = Observable.timer(0, 5000);
+    let timer = Observable.timer(0, 500000);
     timer.subscribe(() => this.getProjects());
     timer.subscribe(() => this.getArticles());
 

@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Rx';
 import { Params, ActivatedRoute } from '@angular/router';
 
 import { Article } from './article';
+import { PaginationComponent } from '../pagination/pagination.component';
 import { ArticlesService } from './articles.service';
 
 @Component({
@@ -13,6 +14,7 @@ import { ArticlesService } from './articles.service';
 
 export class ArticleShowComponent implements OnInit {
     article: Article;
+    articles: Article[];
     errorMessage: string;
     constructor(
         private route: ActivatedRoute,
@@ -21,10 +23,18 @@ export class ArticleShowComponent implements OnInit {
 
     ngOnInit(): void {
         let request = this.route.params
-                            .flatMap((params: Params) => this.articleService.getArticle(+params['id']));
+                            .flatMap((params: Params) => this.articleService.getArticle(params['title']));
         request.subscribe(
             response => this.article = response.json(),
             error => this.errorMessage = error
         );
+        this.articleService.getArticles()
+            .subscribe(
+                response => {
+                    this.articles = response;
+                    console.log(this.articles);
+                },
+                error => this.errorMessage = error
+            )
     }
 }

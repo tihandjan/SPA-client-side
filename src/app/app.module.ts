@@ -24,6 +24,7 @@ import { AdminComponent } from './admin/admin.component';
 import { NewArticleComponent } from './admin/articles/new-article.component';
 import { NewProjectComponent } from './admin/projects/new-project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AdminComponent,
     NewArticleComponent,
     NewProjectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,8 +15,8 @@ export class ProjectsService {
               .catch(this.handleError);
   }
 
-  getProject(id: number) {
-    return this.http.get(this.projects_url + '/' + id + '.json');
+  getProject(title: string) {
+    return this.http.get(this.projects_url + '/' + title + '.json');
   }
 
   createProject(project: Project) {

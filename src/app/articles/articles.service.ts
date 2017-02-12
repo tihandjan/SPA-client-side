@@ -16,8 +16,8 @@ export class ArticlesService {
                         .catch(this.handleError);
     }
 
-    getArticle(id: number) {
-        return this.http.get(this.request_url + '/' + id + '.json')
+    getArticle(title: string) {
+        return this.http.get(this.request_url + '/' + title + '.json')
     }
 
     createArticle(article: Article) {

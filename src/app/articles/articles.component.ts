@@ -10,6 +10,7 @@ import { ArticlesService } from './articles.service';
 })
 export class ArticlesComponent implements OnInit {
   article: Article;
+  articles: Article[];
   errorMessage: string;
 
   constructor(
@@ -19,7 +20,10 @@ export class ArticlesComponent implements OnInit {
   ngOnInit() {
     this.articlesService.getArticles()
           .subscribe(
-            response => this.article = response.pop(),
+            response => {
+              this.article = response.pop();
+              this.articles = response;
+            },
             error => this.errorMessage = error
           )
               

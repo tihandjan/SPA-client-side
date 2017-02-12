@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Project } from './project';
 import { ProjectsService } from './projects.service';
+import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
   selector: 'app-projects',
@@ -10,6 +11,7 @@ import { ProjectsService } from './projects.service';
 })
 export class ProjectsComponent implements OnInit {
   project: Project;
+  projects: Project[];
   errorMessage: string;
   constructor(
     private projectsService: ProjectsService
@@ -18,7 +20,10 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void{
     this.projectsService.getProjects()
                         .subscribe(
-                          response => this.project = response.pop(),
+                          response => {
+                            this.project = response.pop();
+                            this.projects = response;
+                          },
                           error => this.errorMessage = error);
   }
 

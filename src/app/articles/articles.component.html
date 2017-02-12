@@ -2,14 +2,11 @@
   <div class="img-wrapper">
     <img [src]="article.image" [alt]="article.title">
   </div>
-  <h1 class="article-h1">Article text here</h1>
+  <h1 class="article-h1">{{ article.title }}</h1>
   <p class="spacer-line">__</p>
   <p class="article-date">{{ article.created_at }}</p>
   <p class="article-technology">{{ article.technology }}</p>
   <p class="article-description">{{ article.description }}</p>
 
-  <div class="pagination-custom clearfix">
-    <a md-raised-button href="#" class="prev"><md-icon>arrow_back</md-icon></a>
-    <a md-raised-button href="#" class="next"><md-icon>arrow_forward</md-icon></a>
-  </div>
+  <app-pagination [items]="articles" [item]="article"></app-pagination>
 </div>

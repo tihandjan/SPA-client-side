@@ -22,7 +22,7 @@ export class ShowProjectComponent implements OnInit {
     ngOnInit(): void {
         let response = this.route.params
                             .flatMap((params: Params) =>
-                            this.projectsService.getProject(+params['id']));
+                            this.projectsService.getProject(params['title']));
         response.subscribe(
             response => this.project = response.json(),
             error => this.errorMessage = error

@@ -17,9 +17,9 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'contacts', component: ContactsComponent },
     { path: 'projects', component: ProjectsComponent },
-    { path: 'projects/:id', component: ShowProjectComponent },
+    { path: 'projects/:title', component: ShowProjectComponent },
     { path: 'articles', component: ArticlesComponent },
-    { path: 'articles/:id', component: ArticleShowComponent }, 
+    { path: 'articles/:title', component: ArticleShowComponent }, 
     { path: 'admin', 
       component: AdminComponent ,
       children: [

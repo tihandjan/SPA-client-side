@@ -10,8 +10,6 @@
   <p>Website: <a href="{{ project.site_url }}" target="_blank">{{ project.name }}</a></p>
   <p>Дата релиза: <span class="realise-date">{{ project.realise }}</span></p>
 
-  <div class="pagination-custom clearfix">
-    <a md-raised-button href="#" class="prev"><md-icon>arrow_back</md-icon></a>
-    <a md-raised-button href="#" class="next"><md-icon>arrow_forward</md-icon></a>
-  </div>
+  <app-pagination></app-pagination>
+  
 </div>
