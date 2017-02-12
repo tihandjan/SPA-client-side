@@ -59,12 +59,12 @@ export class PaginationComponent implements OnInit, OnChanges {
     prevPage() {
         if(this.prevDisabled) { return }
         let index = this.findElementIndex();
-        this.route.navigate([this.road, this.items[index-1].title.toLowerCase().split(' ').join('-')])
+        this.route.navigate([this.road, this.items[index-1].id + '-' + this.items[index-1].title.toLowerCase().split(' ').join('-')]);
     }
 
     nextPage() {
         if(this.nextDisabled) { return }
         let index = this.findElementIndex();
-        this.route.navigate([this.road, this.items[index+1].title.toLowerCase().split(' ').join('-')])
+        this.route.navigate([this.road, this.items[index+1].id + '-' + this.items[index+1].title.toLowerCase().split(' ').join('-')]);
     }
 }
