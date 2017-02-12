@@ -11,7 +11,8 @@ import { Project } from './project';
 })
 
 export class ShowProjectComponent implements OnInit {
-    project: Project;
+    project = {};
+    projects = [];
     errorMessage: string;
 
     constructor(
@@ -26,6 +27,11 @@ export class ShowProjectComponent implements OnInit {
         response.subscribe(
             response => this.project = response.json(),
             error => this.errorMessage = error
-        )
+        );
+        this.projectsService.getProjects()
+            .subscribe(
+                response => this.projects = response,
+                error => this.errorMessage = error
+            );
     }
 }

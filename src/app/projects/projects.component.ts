@@ -21,7 +21,7 @@ export class ProjectsComponent implements OnInit {
     this.projectsService.getProjects()
                         .subscribe(
                           response => {
-                            this.project = response.pop();
+                            this.project = response[0];
                             this.projects = response;
                           },
                           error => this.errorMessage = error);

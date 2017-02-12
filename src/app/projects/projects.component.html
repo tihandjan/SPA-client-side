@@ -10,6 +10,6 @@
   <p>Website: <a href="{{ project.site_url }}" target="_blank">{{ project.name }}</a></p>
   <p>Дата релиза: <span class="realise-date">{{ project.realise }}</span></p>
 
-  <app-pagination></app-pagination>
+  <app-pagination [items]="projects" [item]="project" [road]="'/projects'"></app-pagination>
   
 </div>

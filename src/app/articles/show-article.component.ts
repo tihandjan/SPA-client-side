@@ -13,8 +13,8 @@ import { ArticlesService } from './articles.service';
 })
 
 export class ArticleShowComponent implements OnInit {
-    article: Article;
-    articles: Article[];
+    article = {};
+    articles = [];
     errorMessage: string;
     constructor(
         private route: ActivatedRoute,

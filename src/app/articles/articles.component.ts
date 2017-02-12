@@ -21,7 +21,7 @@ export class ArticlesComponent implements OnInit {
     this.articlesService.getArticles()
           .subscribe(
             response => {
-              this.article = response.pop();
+              this.article = response[0];
               this.articles = response;
             },
             error => this.errorMessage = error
