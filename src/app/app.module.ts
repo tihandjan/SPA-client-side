@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
+import { FileSelectDirective } from 'ng2-file-upload';
 import 'hammerjs';
 
 import { ProjectsService } from './projects/projects.service';
@@ -44,6 +45,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     NewProjectComponent,
     PageNotFoundComponent,
     PaginationComponent,
+    FileSelectDirective,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,8 @@ export class Article {
         public title?: string,
         public summary?: string,
         public description?: string,
-        public image?: string,
-        public technology?: string
+        public image?: any,
+        public technology?: string,
+        public picture?: Array<string>
     ) {}
 }

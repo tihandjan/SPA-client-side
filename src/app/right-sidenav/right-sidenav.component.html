@@ -32,7 +32,7 @@
       <md-grid-list cols="1" rowHeight="200px">
 
         <md-grid-tile *ngFor="let article of articles" [routerLink]="['articles', article.id + '-' + article.title.toLowerCase().split(' ').join('-')]">
-            <img width="100%" [src]="article.image" [alt]="article.title">
+            <img width="100%" [src]="'http://localhost:3000' + article.pictures[0]?.file?.url" [alt]="article.title">
             <md-grid-tile-footer>
               <h3 md-line>{{ article.title }}</h3>
               <span md-line>{{ article.summary }}</span>

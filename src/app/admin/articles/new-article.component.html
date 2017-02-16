@@ -4,7 +4,7 @@
     <h1 class="h1">Add New Article</h1>
     <p class="spacer-line">___</p>
 
-    <form #form="ngForm" (ngSubmit)="createArticle(article)">
+    <form #form="ngForm" (ngSubmit)="createArticle(article)" enctype="multipart/form-data" accept="image/gif,image/jpeg">
       <p>
         <md-input-container class="example-full-width">
           <input type="text" 
@@ -39,10 +39,7 @@
         </md-input-container>
       </p>
       <p>
-          <input type="file"
-                 name="image"
-                 #image="ngModel"
-                 [(ngModel)]="article.image">
+        <input type="file" ng2FileSelect="options" [uploader]="uploader" />
       </p>
       <p>
         <md-input-container class="example-full-width">
@@ -59,6 +56,22 @@
         <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Отправить</button>
       </p>
     </form>
+  </md-card>
+
+  <md-card>
+    <md-card-content>
+      <h2 class="example-h2">Result</h2>
+
+      <section class="example-section">
+        <md-progress-bar
+            class="example-margin"
+            color="primary"
+            [mode]="mode"
+            [value]="uploader.progress"
+            [bufferValue]="bufferValue">
+        </md-progress-bar>
+      </section>
+    </md-card-content>
   </md-card>
 
 </div>
