@@ -22,7 +22,7 @@ export class RightSidenavComponent implements OnInit {
     private articlesService: ArticlesService
   ) { }
   ngOnInit() {
-    let timer = Observable.timer(0, 500000);
+    let timer = Observable.timer(0, 5000);
     timer.subscribe(() => this.getProjects());
     timer.subscribe(() => this.getArticles());
 

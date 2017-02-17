@@ -41,7 +41,7 @@ export class NewArticleComponent implements OnInit {
                   () => {
                     this.uploader.setOptions({url: this.URL + this.picture_id});
                     this.uploader.uploadAll();
-                    setTimeout(()=>{this.showSnack()}, 2500);
+                    setTimeout(()=>{this.showSnack()}, 2000);
                   });
   }
 
