@@ -13,7 +13,7 @@ import { ArticlesService } from './articles.service';
 })
 
 export class ArticleShowComponent implements OnInit {
-    article = {};
+    article: Article;
     articles = [];
     errorMessage: string;
     constructor(
@@ -32,7 +32,6 @@ export class ArticleShowComponent implements OnInit {
             .subscribe(
                 response => {
                     this.articles = response;
-                    console.log(this.articles);
                 },
                 error => this.errorMessage = error
             )

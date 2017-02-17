@@ -5,6 +5,7 @@ export class Article {
         public description?: string,
         public image?: any,
         public technology?: string,
-        public picture?: Array<string>
+        public picture?: Array<string>,
+        public category?: Array<string>,
     ) {}
 }

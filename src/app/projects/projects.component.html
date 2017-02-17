@@ -1,6 +1,6 @@
 <div class="projects-page" *ngIf="project">
   <div class="img-wrapper">
-    <img [src]="project.image" [alt]="project.title">
+    <img [src]="'http://localhost:3000' + project?.pictures[0]?.file?.url" [alt]="project.title">
   </div>
   <h1 class="project-h1">{{ project.title }}</h1>
   <p class="spacer-line">__</p>

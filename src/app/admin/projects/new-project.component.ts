@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import { FileUploader } from 'ng2-file-upload';
 
 import { Project } from '../../projects/project';
 import { ProjectsService } from '../../projects/projects.service';
@@ -13,6 +14,10 @@ import { ProjectsService } from '../../projects/projects.service';
 })
 export class NewProjectComponent implements OnInit {
   project = new Project;
+  picture_id: number;
+  URL = 'http://localhost:3000/picture_create/';
+  public uploader: FileUploader = new FileUploader({url: this.URL});
+
   constructor(
     private projectService: ProjectsService,
     private snackbar: MdSnackBar,
@@ -24,16 +29,20 @@ export class NewProjectComponent implements OnInit {
 
   createProject(project: Project) {
     this.project = new Project;
-    this.showSnack();
     this.projectService.createProject(project)
           .subscribe(
-            date => {
-              return true;
+            data => {
+              this.picture_id = data.pictures[0].id;
+              console.log(this.picture_id);
             },
             error => {
               return Observable.throw(error);
-            }
-          )
+            },
+            () => {
+              this.uploader.setOptions({url: this.URL + this.picture_id});
+              this.uploader.uploadAll();
+              setTimeout(()=>{this.showSnack()}, 2500);
+          });
                 
   }
 
@@ -42,5 +51,4 @@ export class NewProjectComponent implements OnInit {
     this.snackbar.open('Project has been created successfully ', 'Got it', config);
   }
   
-
 }

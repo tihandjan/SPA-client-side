@@ -11,7 +11,7 @@ import { Project } from './project';
 })
 
 export class ShowProjectComponent implements OnInit {
-    project = {};
+    project: Project;
     projects = [];
     errorMessage: string;
 
@@ -25,8 +25,10 @@ export class ShowProjectComponent implements OnInit {
                             .flatMap((params: Params) =>
                             this.projectsService.getProject(params['title']));
         response.subscribe(
-            response => this.project = response.json(),
-            error => this.errorMessage = error
+            response => {
+                this.project = response.json();
+            },
+            error => this.errorMessage = error,
         );
         this.projectsService.getProjects()
             .subscribe(

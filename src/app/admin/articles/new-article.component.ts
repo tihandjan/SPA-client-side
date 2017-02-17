@@ -17,7 +17,6 @@ export class NewArticleComponent implements OnInit {
   article: Article = new Article;
   picture_id: number;
   URL = 'http://localhost:3000/picture_create/';
-
   public uploader: FileUploader = new FileUploader({url: this.URL});
 
   constructor(
