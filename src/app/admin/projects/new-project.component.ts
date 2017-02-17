@@ -33,7 +33,6 @@ export class NewProjectComponent implements OnInit {
           .subscribe(
             data => {
               this.picture_id = data.pictures[0].id;
-              console.log(this.picture_id);
             },
             error => {
               return Observable.throw(error);
@@ -50,5 +49,5 @@ export class NewProjectComponent implements OnInit {
     let config = new MdSnackBarConfig();
     this.snackbar.open('Project has been created successfully ', 'Got it', config);
   }
-  
+
 }
