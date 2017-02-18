@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Article } from './article';
+import { url } from '../shared/url.component';
 
 @Injectable()
 export class ArticlesService {
-    request_url: string = 'http://localhost:3000/articles'
+    request_url: string = url + 'articles'
     constructor(
         private http: Http
     ) {}
@@ -17,7 +18,7 @@ export class ArticlesService {
     }
 
     getArticle(title: string) {
-        return this.http.get(this.request_url + '/' + title + '.json')
+        return this.http.get(this.request_url + '/' + title + '.json');
     }
 
     createArticle(article: Article) {
@@ -25,6 +26,12 @@ export class ArticlesService {
       let options = new RequestOptions({ headers: headers })
       return this.http.post(this.request_url, JSON.stringify(article), options)
                   .map((response: Response) => response.json());
+    }
+
+    deleteArticle(id: number) {
+      let headers = new Headers({ 'Content-type': 'application/json' });     
+      let options = new RequestOptions({ headers: headers });
+      return this.http.delete((this.request_url + '/' + id), options);
     }
 
     private handleError (error: Response | any) {

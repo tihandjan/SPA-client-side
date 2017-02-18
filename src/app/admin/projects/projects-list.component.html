@@ -1,0 +1,14 @@
+<div class="admin-items">
+  <md-card>
+    <md-list>
+      <h3 md-subheader>Projects</h3>
+      <md-list-item *ngFor="let project of projects">
+        <button md-icon-button><md-icon>delete</md-icon></button>
+        <button md-icon-button><md-icon>edit</md-icon></button>
+        <button md-icon-button [routerLink]="['/projects', project.id]"><md-icon>visibility</md-icon></button>
+        <h4 md-line>{{ project.title }}</h4>
+      </md-list-item>
+      <md-divider></md-divider>
+    </md-list>
+  </md-card>
+</div>

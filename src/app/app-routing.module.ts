@@ -11,6 +11,8 @@ import { AdminComponent } from './admin/admin.component';
 import { NewArticleComponent } from './admin/articles/new-article.component';
 import { NewProjectComponent } from './admin/projects/new-project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ArticlesListComponent } from './admin/articles/articles-list.component';
+import { ProjectsListComponent } from './admin/projects/projects-list.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,6 +27,8 @@ const routes: Routes = [
       children: [
         { path: 'articles/new', component: NewArticleComponent },
         { path: 'projects/new', component: NewProjectComponent },
+        { path: 'articles', component: ArticlesListComponent },
+        { path: 'projects', component: ProjectsListComponent },
       ]
     },
     { path: '**', component: PageNotFoundComponent }

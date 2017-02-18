@@ -26,6 +26,8 @@ import { NewArticleComponent } from './admin/articles/new-article.component';
 import { NewProjectComponent } from './admin/projects/new-project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ArticlesListComponent } from './admin/articles/articles-list.component';
+import { ProjectsListComponent } from './admin/projects/projects-list.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     PageNotFoundComponent,
     PaginationComponent,
     FileSelectDirective,
+    ArticlesListComponent,
+    ProjectsListComponent,
   ],
   imports: [
     BrowserModule,
