@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
 
 import { ProjectsService } from '../../projects/projects.service';
 import { Project } from '../../projects/project';
@@ -21,6 +22,20 @@ export class ProjectsListComponent implements OnInit {
             response => this.projects = response,
             error => this.errorMessages = error
           )
+  }
+
+  deleteProject(project) {
+    this.projectsService.deleteProject(project.id)
+          .subscribe(
+            data => { return true },
+            error => Observable.throw(error),
+            () => this.deleteProjectFromArray(project)
+          );
+  }
+
+  deleteProjectFromArray(project) {
+    let index = this.projects.indexOf(project);
+    this.projects.splice(index, 1);
   }
 
 }

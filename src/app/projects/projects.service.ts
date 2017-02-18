@@ -3,10 +3,11 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { Project } from './project';
+import { url } from '../shared/url.component';
 
 @Injectable()
 export class ProjectsService {
-  projects_url: string = 'http://localhost:3000/projects'
+  projects_url: string = url + 'projects';
   constructor(private http: Http) { }
 
   getProjects(): Observable<Project[]> {
@@ -24,6 +25,12 @@ export class ProjectsService {
     let options = new RequestOptions({ headers: headers });
     return this.http.post('http://localhost:3000/projects', JSON.stringify(project), options)
                   .map((response: Response) => response.json());
+  }
+
+  deleteProject(id: number) {
+    let headers = new Headers({ 'Content-type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.delete((this.projects_url + '/' + id), options);
   }
 
   private handleError (error: Response | any) {
