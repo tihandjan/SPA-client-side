@@ -6,7 +6,7 @@
         <div class="col-lg-6 col-custom" *ngFor="let project of projects">
           <a [routerLink]="['projects', project.id + '-' + project.title.toLowerCase().split(' ').join('-')]">
             <md-card class="example-card">
-              <img md-card-image [src]="'http://localhost:3000' + project.pictures[0]?.file?.url" [alt]="project.title">
+              <img md-card-image [src]="url + project.pictures[0]?.file?.url" [alt]="project.title">
               <md-card-content>
                 <div class="title">
                   <strong>
@@ -32,7 +32,7 @@
       <md-grid-list cols="1" rowHeight="200px">
 
         <md-grid-tile *ngFor="let article of articles" [routerLink]="['articles', article.id + '-' + article.title.toLowerCase().split(' ').join('-')]">
-            <img width="100%" [src]="'http://localhost:3000' + article.pictures[0]?.file?.url" [alt]="article.title">
+            <img width="100%" [src]="url + article.pictures[0]?.file?.url" [alt]="article.title">
             <md-grid-tile-footer>
               <h3 md-line>{{ article.title }}</h3>
               <span md-line>{{ article.summary }}</span>

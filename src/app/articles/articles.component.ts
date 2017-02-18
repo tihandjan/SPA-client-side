@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Article } from './article';
 import { ArticlesService } from './articles.service';
+import { url } from '../shared/url.component';
 
 @Component({
   selector: 'app-articles',
@@ -12,6 +13,7 @@ export class ArticlesComponent implements OnInit {
   article: Article;
   articles: Article[];
   errorMessage: string;
+  url: string = url;
 
   constructor(
     private articlesService: ArticlesService

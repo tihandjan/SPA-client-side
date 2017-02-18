@@ -5,6 +5,7 @@ import { Params, ActivatedRoute } from '@angular/router';
 import { Article } from './article';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { ArticlesService } from './articles.service';
+import { url } from '../shared/url.component';
 
 @Component({
     selector: 'app-show-article',
@@ -16,6 +17,7 @@ export class ArticleShowComponent implements OnInit {
     article: Article;
     articles = [];
     errorMessage: string;
+    url: string = url;
     constructor(
         private route: ActivatedRoute,
         private articleService: ArticlesService

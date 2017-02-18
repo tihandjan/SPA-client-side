@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
+import { url } from '../shared/url.component';
 
 import { Project } from '../projects/project';
 import { Article } from '../articles/article';
@@ -16,13 +17,14 @@ export class RightSidenavComponent implements OnInit {
   projects: Project[];
   articles: Article[];
   errorMessage: string;
+  url: string = url;
   constructor(
     private router: Router, 
     private projectsService: ProjectsService, 
     private articlesService: ArticlesService
   ) { }
   ngOnInit() {
-    let timer = Observable.timer(0, 5000);
+    let timer = Observable.timer(0, 50000);
     timer.subscribe(() => this.getProjects());
     timer.subscribe(() => this.getArticles());
 

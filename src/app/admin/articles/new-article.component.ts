@@ -2,6 +2,8 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 import { Observable } from 'rxjs/Rx';
 import { FileUploader } from 'ng2-file-upload';
+import { url } from '../../shared/url.component';
+
 
 
 import { Article } from '../../articles/article';
@@ -16,7 +18,7 @@ import { ArticlesService } from '../../articles/articles.service';
 export class NewArticleComponent implements OnInit {
   article: Article = new Article;
   picture_id: number;
-  URL = 'http://localhost:3000/picture_create/';
+  URL = url + 'picture_create/';
   public uploader: FileUploader = new FileUploader({url: this.URL});
 
   constructor(

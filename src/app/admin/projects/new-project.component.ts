@@ -2,6 +2,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
 import { FileUploader } from 'ng2-file-upload';
+import { url } from '../../shared/url.component';
 
 import { Project } from '../../projects/project';
 import { ProjectsService } from '../../projects/projects.service';
@@ -15,7 +16,7 @@ import { ProjectsService } from '../../projects/projects.service';
 export class NewProjectComponent implements OnInit {
   project = new Project;
   picture_id: number;
-  URL = 'http://localhost:3000/picture_create/';
+  URL = url + 'picture_create/';
   public uploader: FileUploader = new FileUploader({url: this.URL});
 
   constructor(

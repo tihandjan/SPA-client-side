@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 import { ProjectsService } from './projects.service';
 import { Project } from './project';
+import { url } from '../shared/url.component';
 
 @Component({
     selector: 'app-show-project',
@@ -14,6 +15,7 @@ export class ShowProjectComponent implements OnInit {
     project: Project;
     projects = [];
     errorMessage: string;
+    url: string = url;
 
     constructor(
         private route: ActivatedRoute,
