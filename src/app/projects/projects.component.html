@@ -5,7 +5,8 @@
   <h1 class="project-h1">{{ project.title }}</h1>
   <p class="spacer-line">__</p>
   <p class="project-technology">{{ project.technology }}</p>
-  <p class="project-description">{{ project.description }}</p>
+  <p class="article-description" [innerHTML]=project.description></p>
+
 
   <p>Website: <a href="{{ project.site_url }}" target="_blank">{{ project.name }}</a></p>
   <p>Дата релиза: <span class="realise-date">{{ project.realise }}</span></p>

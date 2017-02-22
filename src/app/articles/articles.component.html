@@ -6,7 +6,7 @@
   <p class="spacer-line">__</p>
   <p class="article-date">{{ article.created_at }}</p>
   <p class="article-technology">{{ article.technology }}</p>
-  <p class="article-description">{{ article.description }}</p>
+  <p class="article-description" [innerHTML]=article.description></p>
 
   <app-pagination [items]="articles" [item]="article" [road]="'/articles'"></app-pagination>
 </div>
