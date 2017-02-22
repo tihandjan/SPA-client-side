@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 import { FileSelectDirective } from 'ng2-file-upload';
 import 'hammerjs';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 import { ProjectsService } from './projects/projects.service';
 import { ArticlesService } from './articles/articles.service';
+import { AdminGuard } from './admin/admin.guard';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +30,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PaginationComponent } from './pagination/pagination.component';
 import { ArticlesListComponent } from './admin/articles/articles-list.component';
 import { ProjectsListComponent } from './admin/projects/projects-list.component';
+import { EditArticleComponent } from './admin/articles/edit-article.component';
 
 @NgModule({
   declarations: [
@@ -50,15 +53,17 @@ import { ProjectsListComponent } from './admin/projects/projects-list.component'
     FileSelectDirective,
     ArticlesListComponent,
     ProjectsListComponent,
+    EditArticleComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    CKEditorModule,
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [ProjectsService, ArticlesService],
+  providers: [ProjectsService, ArticlesService, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

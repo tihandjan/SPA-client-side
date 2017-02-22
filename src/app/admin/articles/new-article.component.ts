@@ -19,13 +19,16 @@ export class NewArticleComponent implements OnInit {
   article: Article = new Article;
   picture_id: number;
   URL = url + 'picture_create/';
+  description: any;
   public uploader: FileUploader = new FileUploader({url: this.URL});
 
   constructor(
     private articleService: ArticlesService,
     private snackbar: MdSnackBar,
     public viewContainerRef: ViewContainerRef,
-  ) { }
+  ) {
+    this.description = 'sfvdf'
+   }
 
   ngOnInit() {
   }

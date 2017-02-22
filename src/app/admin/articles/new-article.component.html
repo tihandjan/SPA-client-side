@@ -31,15 +31,11 @@
         <input type="file" ng2FileSelect="options" [uploader]="uploader" />
       </p>
       <p>
-        <md-input-container class="example-full-width">
-          <textarea type="text" 
-                    md-input 
-                    placeholder="Description" 
-                    name="description" id="" cols="30" rows="10" 
-                    required
-                    #description="ngModel"
-                    [(ngModel)]="article.description"></textarea>
-        </md-input-container>
+          <ckeditor
+            [(ngModel)]="article.description"
+            [config]="{uiColor: '#99000'}"
+            debounce="500" name="description">
+          </ckeditor>
       </p>
       <p>
         <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Отправить</button>
