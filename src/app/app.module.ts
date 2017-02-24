@@ -5,8 +5,10 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 import { FileSelectDirective } from 'ng2-file-upload';
-import 'hammerjs';
 import { CKEditorModule } from 'ng2-ckeditor';
+import { Angular2TokenService } from 'angular2-token';
+
+import 'hammerjs';
 
 import { ProjectsService } from './projects/projects.service';
 import { ArticlesService } from './articles/articles.service';
@@ -63,7 +65,7 @@ import { EditArticleComponent } from './admin/articles/edit-article.component';
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [ProjectsService, ArticlesService, AdminGuard],
+  providers: [ProjectsService, ArticlesService, AdminGuard, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
