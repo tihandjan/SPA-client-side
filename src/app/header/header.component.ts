@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef } from '@angular/core';
+import { AuthModalComponent } from '../shared/auth-modal/auth-modal.component';
+import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Input() side: any;
-  constructor() { }
+  dialogRef: MdDialogRef<any>;
+
+  constructor(
+      public dialog: MdDialog,
+      public viewContainerRef: ViewContainerRef) { }
+
+  open(key) {
+    let config = new MdDialogConfig();
+    config.viewContainerRef = this.viewContainerRef;
+
+    this.dialogRef = this.dialog.open(AuthModalComponent, config);
+
+    this.dialogRef.afterClosed().subscribe(result => {
+      this.dialogRef = null;
+    });
+  }
 
   ngOnInit() {
   }

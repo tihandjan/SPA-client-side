@@ -5,6 +5,9 @@
       <a [routerLink]="['home']">Игорь Тихоненко</a>
     </h3>
   </a>
-  <md-icon>mood</md-icon>
+  <span>
+    <button md-button (click)="open()"><md-icon>mood</md-icon> Вход</button>
+    <button md-button (click)="open()"><md-icon>account_circle</md-icon> Регистрация</button>
+  </span>
 </md-toolbar>
   

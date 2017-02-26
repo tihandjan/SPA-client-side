@@ -16,6 +16,10 @@ md-radio-button {
   margin-bottom: 10px;
 }
 
+.md-dialog-container {
+  background-color: #FFF;
+}
+
 .radio-button-styling {
   position: fixed;
   top: 30%;

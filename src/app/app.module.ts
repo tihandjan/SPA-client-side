@@ -33,6 +33,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ArticlesListComponent } from './admin/articles/articles-list.component';
 import { ProjectsListComponent } from './admin/projects/projects-list.component';
 import { EditArticleComponent } from './admin/articles/edit-article.component';
+import { AuthModalComponent } from './shared/auth-modal/auth-modal.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,9 @@ import { EditArticleComponent } from './admin/articles/edit-article.component';
     ArticlesListComponent,
     ProjectsListComponent,
     EditArticleComponent,
+    AuthModalComponent,
   ],
+  entryComponents: [AuthModalComponent],
   imports: [
     BrowserModule,
     FormsModule,
