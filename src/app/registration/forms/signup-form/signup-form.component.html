@@ -1,0 +1,41 @@
+<h1 class="h1">Введите почту и пароль для регистрации</h1>
+<p class="spacer-line">___</p>
+
+<form #form="ngForm" (ngSubmit)="signUp(signUpObject)">
+  <p>
+    <md-input-container>
+      <input md-input
+             type="email"
+             placeholder="Почта"
+             required
+             name="email"
+             #email="ngModel"
+             [(ngModel)]="signUpObject.email">  
+    </md-input-container>  
+  </p> 
+  <p>
+    <md-input-container>
+      <input md-input
+             type="password"
+             required
+             placeholder="Пароль"
+             name="password"
+             #password="ngModel"
+             [(ngModel)]="signUpObject.password">
+    </md-input-container>
+  </p>
+  <p>
+    <md-input-container>
+      <input md-input
+             type="password_confirmation"
+             required
+             placeholder="Повторите Пароль"
+             name="password_confirmation"
+             #password_confirmation="ngModel"
+             [(ngModel)]="signUpObject.password_confirmation">
+    </md-input-container>
+  </p>
+  <p>
+    <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Регистрация</button>
+  </p>
+</form>
