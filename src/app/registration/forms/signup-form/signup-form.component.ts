@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Angular2TokenService} from "angular2-token";
 
 @Component({
   selector: 'app-signup-form',
@@ -9,11 +10,26 @@ export class SignupFormComponent implements OnInit {
   signUpObject: any = {
     email: '',
     password: '', 
-    password_confirmation: ''
+    passwordConfirmation: ''
   }
-  constructor() { }
+  constructor(
+    private authService: Angular2TokenService
+  ) { }
 
   ngOnInit() {
+  }
+
+  signUp(obj) {
+    this.authService.registerAccount(obj).subscribe(
+      response => {
+        if (response.status == 200) {
+          console.log(response.json());
+        }
+      },
+      error => {
+        console.log(error.json());
+      }
+    )
   }
 
 }

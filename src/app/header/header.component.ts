@@ -1,6 +1,5 @@
-import { Component, OnInit, Input, ViewContainerRef } from '@angular/core';
-import { AuthModalComponent } from '../shared/auth-modal/auth-modal.component';
-import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
+import { Component, OnInit, Input} from '@angular/core';
+import {Angular2TokenService} from "angular2-token";
 
 @Component({
   selector: 'app-header',
@@ -9,24 +8,19 @@ import { MdDialogRef, MdDialog, MdDialogConfig } from '@angular/material';
 })
 export class HeaderComponent implements OnInit {
   @Input() side: any;
-  dialogRef: MdDialogRef<any>;
 
   constructor(
-      public dialog: MdDialog,
-      public viewContainerRef: ViewContainerRef) { }
-
-  open(key) {
-    let config = new MdDialogConfig();
-    config.viewContainerRef = this.viewContainerRef;
-
-    this.dialogRef = this.dialog.open(AuthModalComponent, config);
-
-    this.dialogRef.afterClosed().subscribe(result => {
-      this.dialogRef = null;
-    });
+    public authService: Angular2TokenService
+  ) {}
+  
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  signOut() {
+    this.authService.signOut().subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
   }
 
 }

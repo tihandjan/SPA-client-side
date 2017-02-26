@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ArticlesListComponent } from './admin/articles/articles-list.component';
 import { ProjectsListComponent } from './admin/projects/projects-list.component';
 import { EditArticleComponent } from './admin/articles/edit-article.component';
+import { SigninComponent } from './registration/signin.component';
+import { SignupComponent } from './registration/signup.component';
 import { AdminGuard } from './admin/admin.guard';
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
     { path: 'projects/:title', component: ShowProjectComponent },
     { path: 'articles', component: ArticlesComponent },
     { path: 'articles/:title', component: ArticleShowComponent }, 
+    { path: 'signin', component: SigninComponent },
+    { path: 'signup', component: SignupComponent },
     { path: 'admin', 
       component: AdminComponent , canActivate: [AdminGuard],
       children: [

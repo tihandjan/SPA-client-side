@@ -27,15 +27,16 @@
   <p>
     <md-input-container>
       <input md-input
-             type="password_confirmation"
+             type="password"
              required
              placeholder="Повторите Пароль"
              name="password_confirmation"
              #password_confirmation="ngModel"
-             [(ngModel)]="signUpObject.password_confirmation">
+             [(ngModel)]="signUpObject.passwordConfirmation">
     </md-input-container>
+    <span *ngIf="signUpObject.password != signUpObject.passwordConfirmation" style="color: red">Пароли должны совпадать</span>
   </p>
   <p>
-    <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid">Регистрация</button>
+    <button type="submit" md-raised-button color="primary" [disabled]="!form.form.valid || signUpObject.password != signUpObject.passwordConfirmation">Регистрация</button>
   </p>
 </form>

@@ -6,8 +6,9 @@
     </h3>
   </a>
   <span>
-    <button md-button (click)="open()"><md-icon>mood</md-icon> Вход</button>
-    <button md-button (click)="open()"><md-icon>account_circle</md-icon> Регистрация</button>
+    <button *ngIf="!authService.userSignedIn()" md-button [routerLink]="['/signin']"><md-icon>mood</md-icon> Вход</button>
+    <button *ngIf="!authService.userSignedIn()" md-button [routerLink]="['/signup']"><md-icon>account_circle</md-icon> Регистрация</button>
+    <button *ngIf="authService.userSignedIn()" md-button (click)="signOut()"><md-icon>power_settings_new</md-icon> Выйти</button>
   </span>
 </md-toolbar>
   

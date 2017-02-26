@@ -33,7 +33,10 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ArticlesListComponent } from './admin/articles/articles-list.component';
 import { ProjectsListComponent } from './admin/projects/projects-list.component';
 import { EditArticleComponent } from './admin/articles/edit-article.component';
-import { AuthModalComponent } from './shared/auth-modal/auth-modal.component';
+import { SigninComponent } from './registration/signin.component';
+import { SignupComponent } from './registration/signup.component';
+import { SigninFormComponent } from './registration/forms/signin-form/signin-form.component';
+import { SignupFormComponent } from './registration/forms/signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -57,9 +60,11 @@ import { AuthModalComponent } from './shared/auth-modal/auth-modal.component';
     ArticlesListComponent,
     ProjectsListComponent,
     EditArticleComponent,
-    AuthModalComponent,
+    SigninComponent,
+    SignupComponent,
+    SigninFormComponent,
+    SignupFormComponent,
   ],
-  entryComponents: [AuthModalComponent],
   imports: [
     BrowserModule,
     FormsModule,
