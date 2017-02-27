@@ -4,15 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
-import { FileSelectDirective } from 'ng2-file-upload';
-import { CKEditorModule } from 'ng2-ckeditor';
 import { Angular2TokenService } from 'angular2-token';
 
 import 'hammerjs';
 
 import { ProjectsService } from './projects/projects.service';
 import { ArticlesService } from './articles/articles.service';
-import { AdminGuard } from './admin/admin.guard';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,14 +22,8 @@ import { ArticlesComponent } from './articles/articles.component';
 import { ShowProjectComponent } from './projects/show-project.component';
 import { ArticleShowComponent } from './articles/show-article.component';
 import { TruncatePipe } from './truncate.pipe';
-import { AdminComponent } from './admin/admin.component';
-import { NewArticleComponent } from './admin/articles/new-article.component';
-import { NewProjectComponent } from './admin/projects/new-project.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PaginationComponent } from './pagination/pagination.component';
-import { ArticlesListComponent } from './admin/articles/articles-list.component';
-import { ProjectsListComponent } from './admin/projects/projects-list.component';
-import { EditArticleComponent } from './admin/articles/edit-article.component';
 import { SigninComponent } from './registration/signin.component';
 import { SignupComponent } from './registration/signup.component';
 import { SigninFormComponent } from './registration/forms/signin-form/signin-form.component';
@@ -51,15 +42,8 @@ import { SignupFormComponent } from './registration/forms/signup-form/signup-for
     ShowProjectComponent,
     ArticleShowComponent,
     TruncatePipe,
-    AdminComponent,
-    NewArticleComponent,
-    NewProjectComponent,
     PageNotFoundComponent,
     PaginationComponent,
-    FileSelectDirective,
-    ArticlesListComponent,
-    ProjectsListComponent,
-    EditArticleComponent,
     SigninComponent,
     SignupComponent,
     SigninFormComponent,
@@ -69,11 +53,10 @@ import { SignupFormComponent } from './registration/forms/signup-form/signup-for
     BrowserModule,
     FormsModule,
     HttpModule,
-    CKEditorModule,
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
-  providers: [ProjectsService, ArticlesService, AdminGuard, Angular2TokenService],
+  providers: [ProjectsService, ArticlesService, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
