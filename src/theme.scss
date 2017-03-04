@@ -2,72 +2,72 @@
 @import '~@angular/material/core/theming/all-theme';
 // Plus imports for other components in your app.
 
-@include md-core();
+@include mat-core();
 
 .purple-theme {
-    $primary: md-palette($md-purple);
-    $accent:  md-palette($md-purple);  
-    $dark-theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-purple);
+    $accent:  mat-palette($mat-purple);  
+    $dark-theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($dark-theme);
 }
 .deep-purple-theme {
-    $primary: md-palette($md-deep-purple);
-    $accent:  md-palette($md-deep-purple);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-deep-purple);
+    $accent:  mat-palette($mat-deep-purple);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .red-theme {
-    $primary: md-palette($md-red);
-    $accent:  md-palette($md-red);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-red);
+    $accent:  mat-palette($mat-red);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .pink-theme {
-    $primary: md-palette($md-pink);
-    $accent:  md-palette($md-pink);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-pink);
+    $accent:  mat-palette($mat-pink);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .light-blue-theme {
-    $primary: md-palette($md-light-blue);
-    $accent:  md-palette($md-light-blue);
-    $theme:   md-light-theme($primary, $accent);
+    $primary: mat-palette($mat-light-blue);
+    $accent:  mat-palette($mat-light-blue);
+    $theme:   mat-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
 }
 .blue-theme {
-    $primary: md-palette($md-blue);
-    $accent:  md-palette($md-blue);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-blue);
+    $accent:  mat-palette($mat-blue);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .indigo-theme {
-    $primary: md-palette($md-indigo);
-    $accent:  md-palette($md-indigo);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-indigo);
+    $accent:  mat-palette($mat-indigo);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .green-theme {
-    $primary: md-palette($md-green);
-    $accent:  md-palette($md-green);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-green);
+    $accent:  mat-palette($mat-green);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .teal-theme {
-    $primary: md-palette($md-teal);
-    $accent:  md-palette($md-teal);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-teal);
+    $accent:  mat-palette($mat-teal);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .deep-orange-theme {
-    $primary: md-palette($md-deep-orange);
-    $accent:  md-palette($md-deep-orange);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-deep-orange);
+    $accent:  mat-palette($mat-deep-orange);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }
 .orange-theme {
-    $primary: md-palette($md-orange);
-    $accent:  md-palette($md-orange);  
-    $theme:    md-light-theme($primary, $accent); 
+    $primary: mat-palette($mat-orange);
+    $accent:  mat-palette($mat-orange);  
+    $theme:    mat-light-theme($primary, $accent); 
     @include angular-material-theme($theme);
 }

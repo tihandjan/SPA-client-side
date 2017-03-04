@@ -1,14 +1,14 @@
 <div class="wrapper">
 
   <md-card *ngIf="article">
-    <h1 class="h1">Add New Article</h1>
+    <h1 class="h1">Edit Article</h1>
     <p class="spacer-line">___</p>
 
     <form #form="ngForm" (ngSubmit)="createArticle(article)" enctype="multipart/form-data" accept="image/gif,image/jpeg">
       <p>
         <md-input-container class="example-full-width">
           <input type="text" 
-                 md-input
+                 mdInput
                  placeholder="title" 
                  required
                  name="title"
@@ -19,7 +19,7 @@
       <p>
         <md-input-container class="example-full-width">
           <input type="text" 
-                 md-input 
+                 mdInput
                  placeholder="Summary" 
                  required
                  name="summary"
@@ -33,7 +33,7 @@
       <p>
         <md-input-container class="example-full-width">
           <textarea type="text" 
-                    md-input 
+                    mdInput
                     placeholder="Description" 
                     name="description" id="" cols="30" rows="10" 
                     required
